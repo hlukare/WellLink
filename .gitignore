@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ignore system files
 .DS_Store
 Thumbs.db
@@ -47,3 +48,7 @@ mongod.conf
 # Ignore any sensitive or private files
 *.key
 *.pem
+=======
+# Google App Engine generated folder
+appengine-generated/
+>>>>>>> cbc28a4f98e4a238d5716b186e3b67c2ca59cdb9
