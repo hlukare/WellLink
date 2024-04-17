@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients' Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Background color for the entire page */
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Transparent background for the form */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="Insert_Patient.php" id="myForm">
+        <label>ENTER THE PRN </label><br>
+        <input type="number" name="prn"><br>
+    
+        <label>ENTER THE FIRST NAME </label><br>
+        <input type="text" name="fname"><br>
+    
+        <label>ENTER THE LAST NAME </label><br>
+        <input type="text" name="lname"><br>
+    
+        <label>ENTER THE PHONE </label><br>
+        <input type="number" name="phone"><br>
+    
+        <label>ENTER THE ADDRESS </label><br>
+        <input type="text" name="add"><br>
+        
+        <input type="submit" value="SUBMIT">
+    </form>
+
+    <!-- HAVE TO ADD TO THE MAIN PAGE -->
+    <form method="post" action="">
+        <a href="Insert_Doctor.html">
+            <input type="button" value="ADD DOCTOR">
+        </a>
+    </form>
+</body>
+</html>

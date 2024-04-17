@@ -1,0 +1,59 @@
+html,body{
+    background-color: #fff;
+    font-family: 'Source Sans Pro',sans-serif;
+    overflow-x: hidden !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+*{
+    text-decoration: none !important;
+}
+
+.nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav .links a{
+    display: inline-block;
+    padding: 10px 10px; /* Adjust padding as needed */
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    border: 2px solid transparent; /* Border for button-like appearance */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.5s ease; /* Smooth transition effect */
+}
+
+.nav .links .mainlink{
+    color: #d4cf27;
+}
+
+.nav .links a:hover {
+    background-color: #e0501b; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    border-color: #e0501b; /* Change border color on hover */
+}
+
+.nav h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+/* Rest of your existing CSS styles... */

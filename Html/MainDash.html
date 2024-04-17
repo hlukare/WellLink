@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainDash</title>
+    <link rel="stylesheet" type="text/css" href="../css/maindash.css"> <!-- Link to external CSS file -->
+    <style>
+        /* Initially hide the form */
+        #createuser, #loginuser, #doctorlogin, #patientlogin {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label>WELCOME TO WELL LINK</label><br>
+        <button id="newuser">CREATE NEW USER</button><br>
+        <label>ALREADY HAVE AN ACCOUNT ? </label><br>
+        <button id="login">LOGIN</button><br>
+
+        <form method="post" action="../PHP/Insert_Patient.php" id="createuser">
+            <label>ENTER THE PRN </label><br>
+            <input type="number" name="prn"><br>
+        
+            <label>ENTER THE FIRST NAME </label><br>
+            <input type="text" name="fname"><br>
+        
+            <label>ENTER THE LAST NAME </label><br>
+            <input type="text" name="lname"><br>
+        
+            <label>ENTER THE PHONE </label><br>
+            <input type="number" name="phone"><br>
+        
+            <label>ENTER THE ADDRESS </label><br>
+            <input type="text" name="add"><br>
+            
+            <input type="submit" value="SUBMIT">
+        </form>
+
+        <form id="loginuser">
+            <input type="button" value="PATIENT LOGIN" id="patient_login"><br>
+            <input type="button" value="DOCTOR LOGIN" id="doctor_login"><br>
+        </form>
+
+        <form id="patientlogin" method="post" action="../PHP/Patient_Info.php">
+            <label>ENTER THE PRN </label><br>
+            <input type="number" name="patient_prn"><br>
+            <input type="submit" name="Submit" value="SUBMIT">
+        </form>
+
+        <form id="doctorlogin" method="post" action="Doctor_Retreive.php">
+            <label>ENTER THE DOCTOR ID</label><br>
+            <input type="number" name="doctor_id"><br>
+            <input type="submit" name="Submit" value="SUBMIT">
+        </form>
+    </div>
+
+    <script>
+        window.onload = function() {
+            var createuser = document.getElementById('createuser');
+            var loginuser = document.getElementById('loginuser');
+            var patientlogin = document.getElementById('patientlogin');
+            var doctorlogin = document.getElementById('doctorlogin');
+            var newuserButton = document.getElementById('newuser');
+            var loginButton = document.getElementById('login');
+            var P_login = document.getElementById('patient_login');
+            var D_login = document.getElementById('doctor_login');
+            
+            function create() {
+                createuser.style.display = 'block';
+                loginuser.style.display = 'none';
+                patientlogin.style.display = 'none';
+                doctorlogin.style.display = 'none';
+            }
+            
+            function login() {
+                createuser.style.display = 'none';
+                loginuser.style.display = 'block';
+                patientlogin.style.display = 'none';
+                doctorlogin.style.display = 'none';
+            }
+            
+            function patientLogin() {
+                createuser.style.display = 'none';
+                loginuser.style.display = 'none';
+                patientlogin.style.display = 'block';
+                doctorlogin.style.display = 'none';
+            }
+            
+            function doctorLogin() {
+                createuser.style.display = 'none';
+                loginuser.style.display = 'none';
+                patientlogin.style.display = 'none';
+                doctorlogin.style.display = 'block';
+            }
+
+            // Assigning the function to the button click event
+            newuserButton.addEventListener('click', create);
+            loginButton.addEventListener('click', login);
+            P_login.addEventListener('click', patientLogin);
+            D_login.addEventListener('click', doctorLogin);
+        };
+    </script>
+</body>
+</html>

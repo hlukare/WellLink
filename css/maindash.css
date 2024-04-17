@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../Images/plain.jpg'); /* Replace 'your_background_image.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif; /* Change font family if needed */
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    margin-top: 50px; /* Adjust vertical position */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Center align the content */
+}
+
+.container label, .container input[type="text"], .container input[type="number"], .container input[type="submit"], .container button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container input[type="text"],
+.container input[type="number"],
+.container input[type="submit"],
+.container button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container input[type="submit"],
+.container button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.container input[type="submit"]:hover,
+.container button:hover {
+    background-color: #45a049;
+}
+
+/* Style for patient login and doctor login buttons */
+.container #patient_login, .container #doctor_login {
+    width: calc(50% - 5px); /* Adjust button width */
+    display: inline-block;
+    margin-right: 10px;
+}
